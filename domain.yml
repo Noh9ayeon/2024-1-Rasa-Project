@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - chatbot_start
+  - chatbot_bye
+  - choose_region
+  - choose_policies
+  - daejeon_choose_policy
+  - center_choose_policy
+  - choose_info
+
+# 엔티티
+entities:
+  - region
+  - policies
+  - policy
+  - info
+
+# 슬롯(엔티티 저장)
+slots:
+  # 지역
+  region:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: region
+
+  # 정책 분야
+  policies:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: policies
+
+  # 정책
+  policy:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: policy
+
+  # 정책정보
+  info:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: info
+
+# 액션 등록
+actions:
+  - action_show_policies
+  - action_show_policy_info
+
+# 답변 등록
+responses:
+  # 답변 - 챗봇종료
+  utter_chatbot_bye:
+    - text: "챗봇을 종료하겠습니다."
+
+  # 답변 - 챗봇 시작
+  utter_chatbot_start1:
+    - text: "안녕하세요. 청년정책 지원 chatbot입니다."
+  utter_chatbot_start2:
+    - text: "알고 싶은 지역을 선택해주세요."
+
+  # 답변 - 분야 선택
+  utter_choose_region1:
+    - text: "알고 싶은 분야를 선택해주세요."
+  utter_choose_region2:
+    - text: "일자리분야/주거분야/교육분야/복지문화분야/참여권리분야 중에서 한가지를 골라주세요."
+
+  # 답변 - (대전)정책 선택
+  utter_daejeon_choose_policy:
+    - text: "알고 싶은 정책을 선택해주세요."
+
+  # 답변 - (중앙부처)정책 선택
+  utter_center_choose_policy:
+    - text: "알고 싶은 정책을 선택해주세요."
+
+  # 답변 - 정보 선택
+  utter_choose_info:
+    - text: "요약/신청자격/신청방법 중에서 한 가지를 골라주세요."

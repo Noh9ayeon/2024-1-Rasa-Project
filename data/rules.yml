@@ -1,0 +1,7 @@
+version: "3.1"
+
+rules:
+  - rule: 챗봇 종료
+    steps:
+      - intent: chatbot_bye
+      - action: utter_chatbot_bye

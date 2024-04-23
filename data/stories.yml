@@ -1,0 +1,76 @@
+version: "3.1"
+
+stories:
+  # 대전 - 일자리분야 - 청년내일희망카드 - 요약 - 신청조건 - 신청방법
+  - story: 대전 일자리분야 시나리오
+    steps:
+      - intent: chatbot_start
+      - action: utter_chatbot_start1
+      - action: utter_chatbot_start2
+      - intent: choose_region
+        entities:
+          - region: "대전"
+      - action: utter_choose_region1
+      - action: utter_choose_region2
+      - intent: choose_policies
+        entities:
+          - policies: "일자리분야"
+      - action: action_show_policies
+      - action: utter_daejeon_choose_policy
+      - intent: daejeon_choose_policy
+        entities:
+          - policy: "청년내일희망카드"
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "요약"
+      - action: action_show_policy_info
+
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "신청자격"
+      - action: action_show_policy_info
+
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "신청방법"
+      - action: action_show_policy_info
+
+  # 중앙부처 - 일자리분야 - 청년일자리 도약장려금 - 요약 - 신청자격 - 신청방법
+  - story: 중앙부처 일자리분야 시나리오
+    steps:
+      - intent: chatbot_start
+      - action: utter_chatbot_start1
+      - action: utter_chatbot_start2
+      - intent: choose_region
+        entities:
+          - region: "중앙부처"
+      - action: utter_choose_region1
+      - action: utter_choose_region2
+      - intent: choose_policies
+        entities:
+          - policies: "일자리분야"
+      - action: action_show_policies
+      - action: utter_center_choose_policy
+      - intent: center_choose_policy
+        entities:
+          - policy: "청년일자리 도약장려금"
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "요약"
+      - action: action_show_policy_info
+
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "신청자격"
+      - action: action_show_policy_info
+
+      - action: utter_choose_info
+      - intent: choose_info
+        entities:
+          - info: "신청방법"
+      - action: action_show_policy_info

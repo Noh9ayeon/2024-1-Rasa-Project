@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+  # 시작
+  - intent: chatbot_start
+    examples: |
+      - 안녕
+      - 안녕하세요
+      - 챗봇 이용하고 싶어
+      - 챗봇 시작할래
+      - 시작
+
+  # 챗봇 종료
+  - intent: chatbot_bye
+    examples: |
+      - 종료할게
+      - 그만할래
+      - 여기까지만 할게
+      - 이만 끝낼게
+      - 끝
+
+  # 지역 선택
+  - intent: choose_region
+    examples: |
+      - [중앙부처](region)
+      - [중앙부처](region) 알려줘
+      - [중앙부처](region) 궁금해
+      - [대전](region)
+      - [대전](region) 알려줘
+      - [대전](region) 궁금해
+      - [서울](region)
+      - [경기](region)
+      - [부산](region)
+      - [광주](region)
+
+  # 정책분야 선택
+  - intent: choose_policies
+    examples: |
+      - [일자리분야](policies)
+      - [주거분야](policies)
+      - [교육분야](policies)
+      - [복지문화분야](policies)
+      - [참여권리분야](policies)
+      - [일자리분야](policies) 정책을 알고 싶어
+      - [주거분야](policies) 정책을 알고 싶어
+      - [교육분야](policies) 정책을 알고 싶어
+      - [복지문화분야](policies) 정책을 알고 싶어
+      - [참여권리분야](policies) 정책을 알고 싶어
+      - [일자리분야](policies) 정책이 뭐가 있는지 궁금해
+      - [주거분야](policies) 정책이 뭐가 있는지 궁금해
+      - [교육분야](policies) 정책이 뭐가 있는지 궁금해
+      - [복지문화분야](policies) 정책이 뭐가 있는지 궁금해
+      - [참여권리분야](policies) 정책이 뭐가 있는지 궁금해
+      - [일자리분야](policies) 정책이 뭐가 있는지 궁금해
+
+  # 대전 정책 선택
+  - intent: daejeon_choose_policy
+    examples: |
+      - [미래두배 청년통장](policy)
+      - [청년내일희망카드](policy)
+      - [청년내일희망카드](policy) 궁금해
+      - [청년마인드링크](policy)
+      - [청년마음건강지원](policy)
+      - [대학생학자금 이자 지원](policy)
+      - [구직청년 면접 정장 대여](policy)
+      - [대전 청년 월세지원 사업](policy)
+      - [청년부상제대군인 등 진로탐색비 지원사업](policy)
+      - [학자금 대출 신용회복 지원](policy)
+      - [청년월세 한시 특별지원](policy)
+
+  # 중앙부처 정책 선택
+  - intent: center_choose_policy
+    examples: |
+      - [청년일자리 도약장려금](policy)
+      - [청년일자리 도약장려금](policy) 알려줘
+      - [청년일자리 도약장려금](policy) 궁금해
+      - [빈 데이터1](policy)
+      - [빈 데이터2](policy)
+      - [빈 데이터3](policy)
+
+  # 정보값
+  - intent: choose_info
+    examples: |
+      - [요약](info)
+      - [신청자격](info)
+      - [신청방법](info)
