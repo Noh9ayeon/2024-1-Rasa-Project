@@ -1,3 +1,4 @@
+# domain.yml
 version: "3.1"
 
 intents:
@@ -80,3 +81,11 @@ responses:
   # 답변 - 정보 선택
   utter_choose_info:
     - text: "요약/신청자격/신청방법 중에서 한 가지를 골라주세요."
+
+  # 답변 - 아무 정보도 없음
+  utter_no_data:
+    - text: "다른 분야를 선택하시거나 챗봇을 종료해주세요."
+
+  # 재시작
+  utter_re_start:
+    - text: 다른 지역의 정보를 알고 싶을 경우 지역명을 보내주세요.

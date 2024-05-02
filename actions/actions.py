@@ -43,7 +43,6 @@ class ActionShowPolicies(Action):
         return []
 
 
-# 정책 정보 출력
 class ActionShowPolicySummary(Action):
     def name(self) -> Text:
         return "action_show_policy_info"
@@ -69,14 +68,29 @@ class ActionShowPolicySummary(Action):
         with open(file_path, 'r', encoding="utf-8") as file:
             policies_data = yaml.safe_load(file)
 
-        # 선택된 정책 분야에 따라 정보 검색
-        policy_info = policies_data['policies'].get(policy_field, {}).get(policy_name, {}).get(info_type, [])
+        try:
+            # 선택된 정책 분야에 따라 정보 검색
+            policy_info = policies_data['policies'].get(policy_field, {}).get(policy_name, {}).get(info_type, [])
 
-        for item in policy_info:
-            if isinstance(item, dict):
-                for key, value in item.items():
-                    dispatcher.utter_message(text=f"{key}: {value}")
+            # 스트링 변수 초기화
+            message = ""
+
+            for item in policy_info:
+                if isinstance(item, dict):
+                    # 딕셔너리의 항목을 문자열에 추가
+                    for key, value in item.items():
+                        message += f"{key}: {value}\n \n"  # 각 항목을 추가할 때 줄바꿈 문자를 사용하여 분리
+                else:
+                    # 리스트 항목이 딕셔너리가 아닌 경우
+                    message += f"{item}\n"
+            
+            if message:  # message 변수에 내용이 있으면 출력
+                dispatcher.utter_message(text=message)
             else:
-                dispatcher.utter_message(text=item)
+                dispatcher.utter_message(text="정보를 찾을 수 없습니다.")
+
+        except Exception as ErrorMessage:
+            dispatcher.utter_message(text="다시 작성해주세요")
+            return []
 
         return []

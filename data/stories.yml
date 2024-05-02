@@ -1,3 +1,4 @@
+# stories.yml
 version: "3.1"
 
 stories:
@@ -21,6 +22,8 @@ stories:
         entities:
           - policy: "청년내일희망카드"
       - action: utter_choose_info
+
+      # 정보 출력
       - intent: choose_info
         entities:
           - info: "요약"
@@ -38,12 +41,8 @@ stories:
           - info: "신청방법"
       - action: action_show_policy_info
 
-  # 중앙부처 - 일자리분야 - 청년일자리 도약장려금 - 요약 - 신청자격 - 신청방법
-  - story: 중앙부처 일자리분야 시나리오
-    steps:
-      - intent: chatbot_start
-      - action: utter_chatbot_start1
-      - action: utter_chatbot_start2
+      # 재시작
+      - action: utter_re_start
       - intent: choose_region
         entities:
           - region: "중앙부처"
@@ -51,19 +50,15 @@ stories:
       - action: utter_choose_region2
       - intent: choose_policies
         entities:
-          - policies: "일자리분야"
+          - policies: "교육분야"
       - action: action_show_policies
       - action: utter_center_choose_policy
       - intent: center_choose_policy
         entities:
-          - policy: "청년일자리 도약장려금"
+          - policy: "청년도전지원사업"
       - action: utter_choose_info
-      - intent: choose_info
-        entities:
-          - info: "요약"
-      - action: action_show_policy_info
 
-      - action: utter_choose_info
+      # 정보 출력
       - intent: choose_info
         entities:
           - info: "신청자격"
@@ -74,3 +69,36 @@ stories:
         entities:
           - info: "신청방법"
       - action: action_show_policy_info
+
+      ## 3번째 시나리오
+      - action: utter_re_start
+      - intent: choose_region
+        entities:
+          - region: "대전"
+      - action: utter_choose_region1
+      - action: utter_choose_region2
+      - intent: choose_policies
+        entities:
+          - policies: "주거분야"
+      - action: action_show_policies
+      - action: utter_no_data
+
+  # # 대전 - 주거분야
+  # - story: 출력 안 되는 경우
+  #   steps:
+  #     - intent: chatbot_start
+  #     - action: utter_chatbot_start1
+  #     - action: utter_chatbot_start2
+  #     - intent: choose_region
+  #       entities:
+  #         - region: "대전"
+  #     - action: utter_choose_region1
+  #     - action: utter_choose_region2
+  #     - intent: choose_policies
+  #       entities:
+  #         - policies: "주거분야"
+  #     - action: action_show_policies
+  #     - action: utter_no_data
+  #     - intent: choose_policies
+  #       entities:
+  #         - policies: "복지문화분야"
