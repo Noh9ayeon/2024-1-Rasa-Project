@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-info",
+      "2": "I-info",
+      "3": "L-info",
+      "4": "U-info",
+      "5": "B-policies",
+      "6": "I-policies",
+      "7": "L-policies",
+      "8": "U-policies",
+      "9": "B-policy",
+      "10": "I-policy",
+      "11": "L-policy",
+      "12": "U-policy",
+      "13": "B-region",
+      "14": "I-region",
+      "15": "L-region",
+      "16": "U-region",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-info": 1,
+      "I-info": 2,
+      "L-info": 3,
+      "U-info": 4,
+      "B-policies": 5,
+      "I-policies": 6,
+      "L-policies": 7,
+      "U-policies": 8,
+      "B-policy": 9,
+      "I-policy": 10,
+      "L-policy": 11,
+      "U-policy": 12,
+      "B-region": 13,
+      "I-region": 14,
+      "L-region": 15,
+      "U-region": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

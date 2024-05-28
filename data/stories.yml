@@ -8,7 +8,7 @@ stories:
       - intent: chatbot_start
       - action: utter_chatbot_start1
       - action: utter_chatbot_start2
-      - intent: choose_region
+      - intent: choose_region_Deajeon
         entities:
           - region: "대전"
       - action: utter_choose_region1
@@ -43,7 +43,7 @@ stories:
 
       # 재시작
       - action: utter_re_start
-      - intent: choose_region
+      - intent: choose_region_center
         entities:
           - region: "중앙부처"
       - action: utter_choose_region1
@@ -72,7 +72,7 @@ stories:
 
       ## 3번째 시나리오
       - action: utter_re_start
-      - intent: choose_region
+      - intent: choose_region_Deajeon
         entities:
           - region: "대전"
       - action: utter_choose_region1
@@ -82,23 +82,3 @@ stories:
           - policies: "주거분야"
       - action: action_show_policies
       - action: utter_no_data
-
-  # # 대전 - 주거분야
-  # - story: 출력 안 되는 경우
-  #   steps:
-  #     - intent: chatbot_start
-  #     - action: utter_chatbot_start1
-  #     - action: utter_chatbot_start2
-  #     - intent: choose_region
-  #       entities:
-  #         - region: "대전"
-  #     - action: utter_choose_region1
-  #     - action: utter_choose_region2
-  #     - intent: choose_policies
-  #       entities:
-  #         - policies: "주거분야"
-  #     - action: action_show_policies
-  #     - action: utter_no_data
-  #     - intent: choose_policies
-  #       entities:
-  #         - policies: "복지문화분야"

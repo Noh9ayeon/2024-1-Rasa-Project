@@ -4,7 +4,9 @@ version: "3.1"
 intents:
   - chatbot_start
   - chatbot_bye
-  - choose_region
+  - choose_region_center
+  - choose_region_Deajeon
+  - choose_region_Seoul
   - choose_policies
   - daejeon_choose_policy
   - center_choose_policy

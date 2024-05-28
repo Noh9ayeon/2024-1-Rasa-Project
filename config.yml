@@ -9,8 +9,8 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
-- name: DIETClassifier
   epochs: 100
+- name: DIETClassifier
   constrain_similarities: true
 - name: EntitySynonymMapper
 - name: ResponseSelector

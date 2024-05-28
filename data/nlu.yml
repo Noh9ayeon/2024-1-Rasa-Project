@@ -21,21 +21,29 @@ nlu:
       - 이만 끝낼게
       - 끝
 
-  # 지역 선택
-  - intent: choose_region
+  # 지역 선택(중앙부처)
+  - intent: choose_region_center
     examples: |
       - [중앙부처](region)
       - [중앙부처](region) 알려줘
       - [중앙부처](region) 궁금해
       - [중앙부처](region) 에서는 지금 어떤 정책들이 실행되고 있어?
+
+  # 지역선택(대전)
+  - intent: choose_region_Deajeon
+    examples: |
       - [대전](region)
       - [대전](region) 알려줘
       - [대전](region) 궁금해
       - [대전](region) 에서 시행하고 있는 정책들이 궁금한데 알려줄래?
+
+  #지역 선택(서울)
+  - intent: choose_region_Seoul
+    examples: |
       - [서울](region)
-      - [경기](region)
-      - [부산](region)
-      - [광주](region)
+      - [서울](region) 알려줘
+      - [서울](region) 궁금해
+      - [서울](region) 에서 시행하고 있는 정책들이 궁금한데 알려줄래?
 
   # 정책분야 선택
   - intent: choose_policies
@@ -65,11 +73,23 @@ nlu:
       - [청년내일희망카드](policy) 궁금해
       - [청년내일희망카드](policy) 알려줘
       - [청년마인드링크](policy)
+      - [청년마인드링크](policy) 궁금해
+      - [청년마인드링크](policy) 알려줘
       - [청년마음건강지원](policy)
+      - [청년마음건강지원](policy) 궁금해
+      - [청년마음건강지원](policy) 알려줘
       - [대학생학자금 이자 지원](policy)
+      - [대학생학자금 이자 지원](policy) 궁금해
+      - [대학생학자금 이자 지원](policy) 알려줘
       - [구직청년 면접 정장 대여](policy)
+      - [구직청년 면접 정장 대여](policy) 궁금해
+      - [구직청년 면접 정장 대여](policy) 알려줘
       - [대전 청년 월세지원 사업](policy)
+      - [대전 청년 월세지원 사업](policy) 궁금해
+      - [대전 청년 월세지원 사업](policy) 알려줘
       - [청년부상제대군인 등 진로탐색비 지원사업](policy)
+      - [청년부상제대군인 등 진로탐색비 지원사업](policy) 궁금해
+      - [청년부상제대군인 등 진로탐색비 지원사업](policy) 알려줘
       - [학자금 대출 신용회복 지원](policy)
       - [청년월세 한시 특별지원](policy)
 
