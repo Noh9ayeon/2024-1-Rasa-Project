@@ -63,6 +63,8 @@ class ActionShowPolicySummary(Action):
             file_path = "data/All_policies_data.yml"
         elif region == '서울':
             file_path == "data/Seoul_policies_data.yml"
+        elif region == '부산':
+            file_path == "data/Busan_policies_data.yml"
         else:
             dispatcher.utter_message(text="지원하지 않는 지역입니다.")
             return []
